@@ -29,11 +29,11 @@ export default class App extends Component {
         if (gesture.dy < 0) {
           Animated.spring(this.animation.y, {
             tension: 1,
-            toValue: -SCREEN_HEIGHT + 110
+            toValue: -SCREEN_HEIGHT + 120
           }).start();
         } else if (gesture.dy > 0) {
           Animated.spring(this.animation.y, {
-            toValue: SCREEN_HEIGHT - 110,
+            toValue: SCREEN_HEIGHT - 120,
             tension: 1
           }).start();
         }
@@ -65,7 +65,7 @@ export default class App extends Component {
 
     const animatedHeaderHeight = this.animation.y.interpolate({
       inputRange: [0, SCREEN_HEIGHT - 90],
-      outputRange: [SCREEN_HEIGHT, 90],
+      outputRange: [SCREEN_HEIGHT / 2, 90],
       extrapolate: 'clamp'
     });
     return (
@@ -86,7 +86,6 @@ export default class App extends Component {
           <Animated.View
             {...this.panResponder.panHandlers}
             style={{
-              flex: 1,
               borderTopWidth: 1,
               borderTopColor: '#999',
               height: animatedHeaderHeight,
