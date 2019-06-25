@@ -5,7 +5,6 @@ import {
   Image,
   PanResponder,
   Animated,
-  StyleSheet,
   Dimensions,
   Slider,
   ScrollView

@@ -19,7 +19,7 @@ const Users = [
   { id: '4', uri: require('../assets/2.jpg') },
   { id: '5', uri: require('../assets/3.jpeg') }
 ];
-export default class App extends Component {
+export default class TinderDeck extends Component {
   constructor(props) {
     super(props);
     this.position = new Animated.ValueXY();
